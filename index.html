@@ -8,8 +8,33 @@
         /* General */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            color: #333;
+            font-family: 'Playfair Display', serif;
+            color: #5A4633;
+            background-color: #FAF6F1;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
         }
 
         /* Hero Section */
@@ -18,11 +43,11 @@
             background: url('background.jpg') center/cover no-repeat;
             position: relative;
             text-align: center;
-            color: white;
+            color: #FAF6F1;
         }
 
         .hero .overlay {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(90, 70, 51, 0.7);
             position: absolute;
             top: 0;
             left: 0;
@@ -34,23 +59,44 @@
             align-items: center;
         }
 
+        .hero h1 {
+            font-size: 4rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
         /* Countdown */
         #countdown {
             text-align: center;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
+            background: #F1E7DC;
         }
 
         .countdown-container {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 2rem;
         }
 
         .countdown-container div {
             text-align: center;
-            background: #f4f4f4;
-            padding: 1rem;
+            background: #FAF6F1;
+            padding: 1rem 2rem;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .countdown-container span {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #5A4633;
+        }
+
+        .countdown-container p {
+            font-size: 1rem;
+            margin: 0;
         }
 
         /* Calendar */
@@ -59,20 +105,25 @@
             justify-content: center;
             align-items: center;
             height: 300px;
-            background: #f9f9f9;
-            margin: 1rem;
-            border: 2px solid #ddd;
+            background: #FAF6F1;
+            margin: 2rem auto;
+            border: 2px dashed #E1C2A0;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            color: #5A4633;
+            font-family: 'Cormorant Garamond', serif;
         }
 
         /* Gallery */
         #gallery {
-            padding: 2rem;
+            padding: 3rem;
             text-align: center;
+            background: #F1E7DC;
         }
 
         .gallery-container {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -81,23 +132,35 @@
             width: 100%;
             max-width: 300px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* Maps */
         .maps-container {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 2rem;
+            background: #FAF6F1;
         }
 
         .map iframe {
             width: 100%;
             max-width: 500px;
             height: 300px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         /* RSVP */
+        #rsvp {
+            padding: 3rem;
+            text-align: center;
+            background: #F1E7DC;
+        }
+
         #rsvp-form {
             display: flex;
             flex-direction: column;
@@ -108,14 +171,20 @@
 
         #rsvp-form input, #rsvp-form button {
             padding: 0.8rem;
-            border: 1px solid #ddd;
+            border: 1px solid #E1C2A0;
             border-radius: 5px;
+            font-size: 1rem;
         }
 
         #rsvp-form button {
-            background: #333;
+            background: #5A4633;
             color: white;
             cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        #rsvp-form button:hover {
+            background: #4B3A2A;
         }
     </style>
 </head>
@@ -142,7 +211,7 @@
     <!-- Calendario -->
     <section id="calendar">
         <h2>Reserva la Fecha</h2>
-        <div id="calendar-wrapper"></div>
+        <div id="calendar-wrapper">📅 23 de Marzo 2025</div>
     </section>
 
     <!-- Galería -->
