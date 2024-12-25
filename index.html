@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda - Luis y Leo</title>
+    <title>Invitación de Boda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora&display=swap" rel="stylesheet">
     <style>
         /* General */
         body {
@@ -12,8 +13,8 @@
             color: #3E2A47;
             background-color: #F4F1E1;
             line-height: 1.7;
+            transition: background-color 0.3s ease-in-out;
         }
-
         h1, h2, h3, p {
             margin: 0;
             padding: 0;
@@ -21,7 +22,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('background.jpg') no-repeat center center;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg') no-repeat center center;
             background-size: cover;
             height: 100vh;
             display: flex;
@@ -31,25 +32,35 @@
             color: white;
             text-align: center;
             padding: 2rem;
+            transition: background 0.3s ease-in-out;
         }
-
         .hero .couple-names {
             font-family: 'Dancing Script', cursive;
             font-size: 6rem;
             color: #E1C2A0;
             margin-bottom: 1rem;
+            transition: transform 0.3s ease-in-out;
         }
-
+        .hero .couple-names:hover {
+            transform: scale(1.05);
+        }
         .hero h1 {
             font-size: 4rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
+            transition: transform 0.3s ease-in-out;
         }
-
+        .hero h1:hover {
+            transform: scale(1.05);
+        }
         .hero p {
             font-size: 1.5rem;
             font-weight: 300;
             margin-top: 0.5rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        .hero p:hover {
+            transform: scale(1.05);
         }
 
         /* Countdown Section */
@@ -58,33 +69,40 @@
             text-align: center;
             background-color: #F4F1E1;
         }
-
         #countdown h2 {
             font-size: 3rem;
             color: #3E2A47;
             margin-bottom: 2rem;
+            transition: color 0.3s ease-in-out;
         }
-
+        #countdown h2:hover {
+            color: #9E7C61;
+        }
         .countdown-container {
             display: flex;
             justify-content: center;
             gap: 3rem;
             flex-wrap: wrap;
         }
-
         .countdown-container div {
             background-color: #E1C2A0;
             padding: 1.5rem 2rem;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
-
+        .countdown-container div:hover {
+            transform: scale(1.05);
+        }
         .countdown-container span {
             font-size: 3rem;
             font-weight: 700;
             color: #3E2A47;
+            transition: color 0.3s ease-in-out;
         }
-
+        .countdown-container span:hover {
+            color: #9E7C61;
+        }
         .countdown-container p {
             font-size: 1rem;
             color: #3E2A47;
@@ -96,34 +114,37 @@
             background: #FAF3D1;
             text-align: center;
         }
-
         #gallery h2 {
             font-size: 2.5rem;
             color: #3E2A47;
             margin-bottom: 2rem;
+            transition: color 0.3s ease-in-out;
         }
-
+        #gallery h2:hover {
+            color: #9E7C61;
+        }
         .gallery-container {
             display: flex;
             justify-content: center;
             gap: 2rem;
             flex-wrap: wrap;
         }
-
         .gallery-item {
             flex: 1;
             max-width: 350px;
             overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
-
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
         .gallery-item img {
             width: 100%;
             height: auto;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease-in-out;
         }
-
         .gallery-item img:hover {
             transform: scale(1.1);
         }
@@ -134,19 +155,20 @@
             background: #F4F1E1;
             text-align: center;
         }
-
         #donations h2 {
             font-size: 2.5rem;
             color: #3E2A47;
             margin-bottom: 1rem;
+            transition: color 0.3s ease-in-out;
         }
-
+        #donations h2:hover {
+            color: #9E7C61;
+        }
         #donations h3 {
             font-size: 1.8rem;
             color: #9E7C61;
             margin-bottom: 2rem;
         }
-
         .donation-divider img {
             max-width: 100%;
             display: block;
@@ -161,13 +183,15 @@
             color: white;
             text-align: center;
         }
-
         #dress-code h2 {
             font-size: 2.5rem;
             color: white;
             margin-bottom: 1.5rem;
+            transition: color 0.3s ease-in-out;
         }
-
+        #dress-code h2:hover {
+            color: #F4F1E1;
+        }
         #dress-code p {
             font-size: 1.5rem;
             margin-top: 1rem;
@@ -179,20 +203,21 @@
             background: #F4F1E1;
             text-align: center;
         }
-
         #maps h2 {
             font-size: 2.5rem;
             color: #3E2A47;
             margin-bottom: 2rem;
+            transition: color 0.3s ease-in-out;
         }
-
+        #maps h2:hover {
+            color: #9E7C61;
+        }
         .maps-container {
             display: flex;
             justify-content: center;
             gap: 2rem;
             flex-wrap: wrap;
         }
-
         .map {
             flex: 1;
             max-width: 500px;
@@ -208,29 +233,30 @@
             color: white;
             text-align: center;
         }
-
         #rsvp-form {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
             max-width: 500px;
             margin: auto;
+            transition: transform 0.3s ease-in-out;
         }
-
         #rsvp-form input, #rsvp-form button {
             padding: 1rem;
             border-radius: 8px;
             border: 2px solid #3E2A47;
             font-size: 1.2rem;
+            transition: transform 0.3s ease-in-out;
         }
-
+        #rsvp-form input:hover, #rsvp-form button:hover {
+            transform: scale(1.05);
+        }
         #rsvp-form button {
             background: #3E2A47;
             color: white;
             cursor: pointer;
             transition: background 0.3s ease;
         }
-
         #rsvp-form button:hover {
             background: #9E7C61;
         }
@@ -241,15 +267,12 @@
                 flex-direction: column;
                 align-items: center;
             }
-
             .gallery-container {
                 flex-direction: column;
             }
-
             .maps-container {
                 flex-direction: column;
             }
-
             .gallery-item img {
                 max-width: 100%;
             }
@@ -257,40 +280,59 @@
     </style>
 </head>
 <body>
+
     <!-- Hero Section -->
-    <header class="hero">
-        <div class="couple-names">Luis y Leo</div>
-        <h1>¡Nos Casamos!</h1>
-        <p>23 de Marzo 2025</p>
-    </header>
+    <section class="hero">
+        <div class="couple-names">Laura & Andrés</div>
+        <h1>¡Nos casamos!</h1>
+        <p>Te invitamos a celebrar con nosotros este día tan especial.</p>
+    </section>
 
     <!-- Countdown Section -->
     <section id="countdown">
-        <h2>Cuenta Regresiva</h2>
+        <h2>Faltan</h2>
         <div class="countdown-container">
-            <div><span id="days">0</span><p>Días</p></div>
-            <div><span id="hours">0</span><p>Horas</p></div>
-            <div><span id="minutes">0</span><p>Minutos</p></div>
-            <div><span id="seconds">0</span><p>Segundos</p></div>
+            <div>
+                <span id="days">0</span>
+                <p>Días</p>
+            </div>
+            <div>
+                <span id="hours">0</span>
+                <p>Horas</p>
+            </div>
+            <div>
+                <span id="minutes">0</span>
+                <p>Minutos</p>
+            </div>
+            <div>
+                <span id="seconds">0</span>
+                <p>Segundos</p>
+            </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
     <section id="gallery">
-        <h2>Momentos Especiales</h2>
+        <h2>Galería de Fotos</h2>
         <div class="gallery-container">
-            <div class="gallery-item"><img src="photo1.jpg" alt="Foto 1"></div>
-            <div class="gallery-item"><img src="photo2.jpg" alt="Foto 2"></div>
-            <div class="gallery-item"><img src="photo3.jpg" alt="Foto 3"></div>
+            <div class="gallery-item">
+                <img src="foto1.jpg" alt="Foto 1">
+            </div>
+            <div class="gallery-item">
+                <img src="foto2.jpg" alt="Foto 2">
+            </div>
+            <div class="gallery-item">
+                <img src="foto3.jpg" alt="Foto 3">
+            </div>
         </div>
     </section>
 
     <!-- Donations Section -->
     <section id="donations">
-        <h2>Agradecemos tus muestras de cariño</h2>
-        <h3>Gracias por ayudarnos a construir nuestra futura familia</h3>
+        <h2>Donaciones</h2>
+        <h3>Si deseas colaborar, hazlo a través de nuestra cuenta bancaria.</h3>
         <div class="donation-divider">
-            <img src="divider.jpg" alt="Foto decorativa">
+            <img src="divider.jpg" alt="Divider">
         </div>
     </section>
 
