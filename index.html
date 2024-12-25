@@ -67,6 +67,14 @@
             font-size: 1.5rem;
         }
 
+        /* Luis y Leo */
+        .couple-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: #E1C2A0;
+            margin-bottom: 1rem;
+        }
+
         /* Countdown */
         #countdown {
             text-align: center;
@@ -99,19 +107,35 @@
             margin: 0;
         }
 
-        /* Calendar */
-        #calendar-wrapper {
+        /* Calendario */
+        #calendar {
+            text-align: center;
+            padding: 3rem;
+            background: #FAF6F1;
+        }
+
+        .calendar-circle {
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            background: linear-gradient(45deg, #E1C2A0, #FAF6F1);
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 300px;
-            background: #FAF6F1;
-            margin: 2rem auto;
-            border: 2px dashed #E1C2A0;
-            border-radius: 10px;
-            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .calendar-circle h2 {
+            margin: 0;
+            font-size: 2rem;
             color: #5A4633;
-            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .calendar-text {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: #7A5E42;
         }
 
         /* Gallery */
@@ -192,6 +216,7 @@
     <!-- Saludo -->
     <header class="hero">
         <div class="overlay">
+            <div class="couple-names">Luis y Leo</div>
             <h1>¡Nos Casamos!</h1>
             <p>23 de Marzo 2025</p>
         </div>
@@ -210,44 +235,13 @@
 
     <!-- Calendario -->
     <section id="calendar">
-        <h2>Reserva la Fecha</h2>
-        <div id="calendar-wrapper">📅 23 de Marzo 2025</div>
-    </section>
-
-    <!-- Galería -->
-    <section id="gallery">
-        <h2>Nuestros Momentos</h2>
-        <div class="gallery-container">
-            <div class="gallery-item"><img src="foto1.jpg" alt="Foto 1"></div>
-            <div class="gallery-item"><img src="foto2.jpg" alt="Foto 2"></div>
-            <div class="gallery-item"><img src="foto3.jpg" alt="Foto 3"></div>
+        <div class="calendar-circle">
+            <h2>23 MAR</h2>
         </div>
+        <div class="calendar-text">¡Reserva la fecha y acompáñanos!</div>
     </section>
 
-    <!-- Mapas -->
-    <section id="maps">
-        <h2>¿Dónde nos encontraremos?</h2>
-        <div class="maps-container">
-            <div class="map">
-                <h3>Iglesia</h3>
-                <iframe src="https://www.google.com/maps/embed?..."></iframe>
-            </div>
-            <div class="map">
-                <h3>Recepción</h3>
-                <iframe src="https://www.google.com/maps/embed?..."></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- RSVP -->
-    <section id="rsvp">
-        <h2>Confirma tu Asistencia</h2>
-        <form id="rsvp-form">
-            <input type="text" placeholder="Tu Nombre" required>
-            <input type="email" placeholder="Tu Correo" required>
-            <button type="submit">Confirmar</button>
-        </form>
-    </section>
+    <!-- Resto del contenido... -->
 
     <script>
         // Countdown Timer
