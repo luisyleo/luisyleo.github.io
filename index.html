@@ -5,260 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
     <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        /* General */
         body {
-            font-family: 'Helvetica', sans-serif;
-            background: #f7f7f7;
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
-            padding: 0;
             margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
         }
 
-        /* Container para todo */
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Sección Bienvenida */
-        header {
+        /* Hero Section */
+        .hero {
             height: 100vh;
-            background-image: url('foto-principal.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
+            background: url('background.jpg') center/cover no-repeat;
+            position: relative;
             text-align: center;
+            color: white;
+        }
+
+        .hero .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Countdown */
+        #countdown {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .countdown-container div {
+            text-align: center;
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        /* Calendar */
+        #calendar-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 300px;
+            background: #f9f9f9;
+            margin: 1rem;
+            border: 2px solid #ddd;
+        }
+
+        /* Gallery */
+        #gallery {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .gallery-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        /* Maps */
+        .maps-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .map iframe {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+        }
+
+        /* RSVP */
+        #rsvp-form {
+            display: flex;
             flex-direction: column;
-            padding: 50px;
-            position: relative;
-            animation: fadeIn 2s ease-out;
+            gap: 1rem;
+            max-width: 400px;
+            margin: auto;
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        header p {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        header .btn {
-            background-color: #ff7b7b;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease;
-        }
-
-        header .btn:hover {
-            background-color: #ff4d4d;
-        }
-
-        /* Animación fadeIn para header */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Sección de Historia */
-        section#story {
-            padding: 60px 0;
-            background: #fff;
-            text-align: center;
-            animation: slideInUp 1s ease-out;
-        }
-
-        section#story h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        section#story p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            line-height: 1.8;
-        }
-
-        /* Animación slideInUp */
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Detalles del Evento */
-        section#details {
-            background: #f2f2f2;
-            padding: 60px 0;
-            text-align: center;
-            animation: fadeIn 2s ease-out;
-        }
-
-        section#details h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-
-        section#details p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        section#details .btn {
-            margin-top: 20px;
-        }
-
-        /* RSVP (Confirmación de asistencia) */
-        section#rsvp {
-            background: #ff7b7b;
-            padding: 60px 0;
-            color: white;
-            text-align: center;
-            animation: fadeIn 2s ease-out;
-        }
-
-        section#rsvp form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: grid;
-            gap: 20px;
-        }
-
-        section#rsvp input,
-        section#rsvp textarea {
-            padding: 10px;
-            font-size: 1rem;
-            border: none;
+        #rsvp-form input, #rsvp-form button {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
             border-radius: 5px;
         }
 
-        section#rsvp input[type="submit"] {
-            background-color: #fff;
-            color: #ff7b7b;
-            border: none;
+        #rsvp-form button {
+            background: #333;
+            color: white;
             cursor: pointer;
-            font-size: 1.2rem;
-            transition: background-color 0.3s ease;
-        }
-
-        section#rsvp input[type="submit"]:hover {
-            background-color: #ff4d4d;
-        }
-
-        /* Agradecimientos */
-        section#thanks {
-            padding: 60px 0;
-            background: #fff;
-            text-align: center;
-            animation: slideInUp 1s ease-out;
-        }
-
-        section#thanks h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        section#thanks p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            color: #ff7b7b;
         }
     </style>
 </head>
 <body>
-
-    <!-- Sección de Bienvenida -->
-    <header>
-        <h1>¡Nos Casamos!</h1>
-        <p>Con mucho amor, [Nombre de la Novia] y [Nombre del Novio] te invitamos a celebrar el día más importante de nuestras vidas.</p>
-        <a href="#details" class="btn">Ver Detalles del Evento</a>
+    <!-- Saludo -->
+    <header class="hero">
+        <div class="overlay">
+            <h1>¡Nos Casamos!</h1>
+            <p>23 de Marzo 2025</p>
+        </div>
     </header>
 
-    <!-- Sección de Historia -->
-    <section id="story">
-        <h2>Cómo Nos Conocimos</h2>
-        <p>[Aquí va una historia corta de cómo se conocieron, el viaje que han recorrido juntos y cómo llegaron a este hermoso día]</p>
+    <!-- Count Down -->
+    <section id="countdown">
+        <h2>¡Faltan solo!</h2>
+        <div class="countdown-container">
+            <div><span id="days">0</span><p>Días</p></div>
+            <div><span id="hours">0</span><p>Horas</p></div>
+            <div><span id="minutes">0</span><p>Minutos</p></div>
+            <div><span id="seconds">0</span><p>Segundos</p></div>
+        </div>
     </section>
 
-    <!-- Sección de Detalles del Evento -->
-    <section id="details">
-        <h2>El Gran Día</h2>
-        <p><strong>Fecha:</strong> [Día, Mes, Año]</p>
-        <p><strong>Hora:</strong> [Hora]</p>
-        <p><strong>Lugar de la Ceremonia:</strong> [Nombre del lugar, Dirección]</p>
-        <p><strong>Lugar de la Recepción:</strong> [Nombre del lugar, Dirección]</p>
-        <a href="https://www.google.com/maps" target="_blank" class="btn">Ver en Google Maps</a>
+    <!-- Calendario -->
+    <section id="calendar">
+        <h2>Reserva la Fecha</h2>
+        <div id="calendar-wrapper"></div>
     </section>
 
-    <!-- Sección de Confirmación de Asistencia (RSVP) -->
+    <!-- Galería -->
+    <section id="gallery">
+        <h2>Nuestros Momentos</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="foto1.jpg" alt="Foto 1"></div>
+            <div class="gallery-item"><img src="foto2.jpg" alt="Foto 2"></div>
+            <div class="gallery-item"><img src="foto3.jpg" alt="Foto 3"></div>
+        </div>
+    </section>
+
+    <!-- Mapas -->
+    <section id="maps">
+        <h2>¿Dónde nos encontraremos?</h2>
+        <div class="maps-container">
+            <div class="map">
+                <h3>Iglesia</h3>
+                <iframe src="https://www.google.com/maps/embed?..."></iframe>
+            </div>
+            <div class="map">
+                <h3>Recepción</h3>
+                <iframe src="https://www.google.com/maps/embed?..."></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP -->
     <section id="rsvp">
         <h2>Confirma tu Asistencia</h2>
-        <form action="#" method="POST">
-            <input type="text" name="name" placeholder="Nombre Completo" required>
-            <input type="number" name="guests" placeholder="Número de Invitados" min="1" required>
-            <textarea name="diet" placeholder="Restricciones Dietéticas (opcional)"></textarea>
-            <input type="submit" value="Confirmar mi asistencia">
+        <form id="rsvp-form">
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="email" placeholder="Tu Correo" required>
+            <button type="submit">Confirmar</button>
         </form>
     </section>
 
-    <!-- Sección de Agradecimientos -->
-    <section id="thanks">
-        <h2>Gracias por ser parte de nuestra historia</h2>
-        <p>Estamos emocionados de compartir este día tan especial con ustedes. ¡Nos vemos pronto!</p>
-    </section>
+    <script>
+        // Countdown Timer
+        const targetDate = new Date("2025-03-23T00:00:00");
+        const updateCountdown = () => {
+            const now = new Date();
+            const difference = targetDate - now;
 
-    <!-- Footer -->
-    <footer>
-        <p>Para más información, contáctanos a [correo@dominio.com] o llámanos al [número].</p>
-        <p><a href="https://www.instagram.com/[tu_usuario]" target="_blank">Síguenos en Instagram</a></p>
-    </footer>
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((difference / (1000 * 60)) % 60);
+            const seconds = Math.floor((difference / 1000) % 60);
 
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        };
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>
