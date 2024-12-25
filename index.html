@@ -8,37 +8,15 @@
         /* General */
         body {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Poppins', sans-serif;
             color: #5A4633;
-            background-color: #FAF6F1;
+            background-color: #F9F4F1;
+            line-height: 1.6;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, p {
             margin: 0;
             padding: 0;
-            font-family: 'Cormorant Garamond', serif;
-            text-align: center;
-            color: #5A4633;
-        }
-
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            font-size: 1.2rem;
-            text-align: center;
         }
 
         /* Hero Section */
@@ -50,50 +28,80 @@
             justify-content: center;
             align-items: center;
             color: #FAF6F1;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            background-size: cover;
         }
 
         .hero .couple-names {
-            font-family: 'Great Vibes', cursive;
-            font-size: 5rem;
+            font-family: 'Dancing Script', cursive;
+            font-size: 6rem;
             color: #E1C2A0;
+            margin-bottom: 0.5rem;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 4rem;
+            color: #F1F1F1;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: 0.5rem;
         }
 
         /* Countdown Section */
         #countdown {
-            padding: 3rem;
+            padding: 4rem;
             background: #F1E7DC;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #countdown h2 {
+            font-size: 2.5rem;
+            color: #5A4633;
+            margin-bottom: 2rem;
         }
 
         .countdown-container {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 3rem;
             flex-wrap: wrap;
         }
 
         .countdown-container div {
             background: #FAF6F1;
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 2px solid #E1C2A0;
         }
 
         .countdown-container span {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
+            color: #5A4633;
+        }
+
+        .countdown-container p {
+            font-size: 1.2rem;
+            color: #5A4633;
         }
 
         /* Gallery Section */
         #gallery {
-            padding: 3rem;
-            text-align: center;
+            padding: 4rem;
             background: #FAF6F1;
+            text-align: center;
+        }
+
+        #gallery h2 {
+            font-size: 2.5rem;
+            color: #5A4633;
+            margin-bottom: 3rem;
         }
 
         .gallery-container {
@@ -105,16 +113,33 @@
 
         .gallery-item img {
             width: 100%;
-            max-width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
         }
 
         /* Donations Section */
         #donations {
-            padding: 3rem;
-            background: #F1E7DC;
+            padding: 4rem;
+            background: #F9F4F1;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #donations h2 {
+            font-size: 2.5rem;
+            color: #5A4633;
+            margin-bottom: 1rem;
+        }
+
+        #donations h3 {
+            font-size: 1.8rem;
+            color: #D79D7B;
         }
 
         .donation-divider img {
@@ -126,71 +151,83 @@
 
         /* Dress Code Section */
         #dress-code {
-            padding: 3rem;
-            background: #F1E7DC;
+            padding: 4rem;
+            background: #D79D7B;
+            color: white;
             text-align: center;
-            color: #D79D7B; /* Color terracota */
         }
 
         #dress-code h2 {
             font-size: 2.5rem;
+            color: white;
             margin-bottom: 1.5rem;
-            color: #5A4633;
         }
 
         #dress-code p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin-top: 1rem;
         }
 
         /* Maps Section */
         #maps {
-            padding: 3rem;
-            background: #FAF6F1;
+            padding: 4rem;
+            background: #F9F4F1;
+            text-align: center;
+        }
+
+        #maps h2 {
+            font-size: 2.5rem;
+            color: #5A4633;
+            margin-bottom: 2rem;
         }
 
         .maps-container {
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
             gap: 2rem;
+            flex-wrap: wrap;
         }
 
         .map {
             flex: 1;
-            min-width: 300px;
+            max-width: 500px;
             height: 300px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         /* RSVP Section */
         #rsvp {
-            padding: 3rem;
+            padding: 4rem;
             background: #F1E7DC;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         #rsvp-form {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
             max-width: 400px;
             margin: auto;
         }
 
         #rsvp-form input, #rsvp-form button {
-            padding: 0.8rem;
-            border: 1px solid #E1C2A0;
-            border-radius: 5px;
-            font-size: 1rem;
+            padding: 1rem;
+            border-radius: 15px;
+            border: 2px solid #D79D7B;
+            font-size: 1.2rem;
         }
 
         #rsvp-form button {
             background: #5A4633;
             color: white;
             cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #rsvp-form button:hover {
+            background: #D79D7B;
         }
 
         /* Responsiveness */
@@ -200,6 +237,10 @@
             }
 
             .maps-container {
+                flex-direction: column;
+            }
+
+            .gallery-container {
                 flex-direction: column;
             }
         }
@@ -215,7 +256,7 @@
 
     <!-- Countdown Section -->
     <section id="countdown">
-        <h2>Cuenta regresiva</h2>
+        <h2>Cuenta Regresiva</h2>
         <div class="countdown-container">
             <div><span id="days">0</span><p>Días</p></div>
             <div><span id="hours">0</span><p>Horas</p></div>
@@ -270,33 +311,34 @@
     <section id="rsvp">
         <h2>Confirma tu Asistencia</h2>
         <form id="rsvp-form">
-            <input type="text" placeholder="Tu nombre" required>
-            <input type="email" placeholder="Tu correo" required>
-            <input type="number" placeholder="Número de invitados" required>
-            <button type="submit">Enviar</button>
+            <input type="text" placeholder="Nombre Completo" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <button type="submit">Confirmar Asistencia</button>
         </form>
     </section>
 
-    <!-- Countdown Script -->
     <script>
-        const targetDate = new Date("2025-03-23T00:00:00");
-        const updateCountdown = () => {
-            const now = new Date();
-            const difference = targetDate - now;
+        // Code for the countdown functionality
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const weddingDate = new Date('Mar 23, 2025 00:00:00').getTime();
+            const distance = weddingDate - now;
 
-            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-            const minutes = Math.floor((difference / (1000 * 60)) % 60);
-            const seconds = Math.floor((difference / 1000) % 60);
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = hours;
-            document.getElementById('minutes').textContent = minutes;
-            document.getElementById('seconds').textContent = seconds;
-        };
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown').innerHTML = '¡Es hoy!';
+            }
+        }, 1000);
     </script>
 </body>
 </html>
