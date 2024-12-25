@@ -11,20 +11,23 @@
             font-family: 'Playfair Display', serif;
             color: #5A4633;
             background-color: #FAF6F1;
-            line-height: 1.6;
         }
 
         h1, h2, h3 {
+            margin: 0;
+            padding: 0;
             font-family: 'Cormorant Garamond', serif;
+            text-align: center;
+            color: #5A4633;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             margin-bottom: 1rem;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
@@ -34,51 +37,37 @@
         }
 
         p {
-            font-size: 1rem;
+            font-size: 1.2rem;
+            text-align: center;
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
             background: url('background.jpg') center/cover no-repeat;
-            position: relative;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-
-        .hero .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            text-align: center;
-            padding: 2rem;
-            border-radius: 10px;
+            color: #FAF6F1;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
         .hero .couple-names {
             font-family: 'Great Vibes', cursive;
             font-size: 5rem;
             color: #E1C2A0;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            color: #FAF6F1;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            font-size: 3rem;
         }
 
-        .hero p {
-            font-size: 1.5rem;
-            color: #FAF6F1;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        /* Countdown */
+        /* Countdown Section */
         #countdown {
-            text-align: center;
-            padding: 2rem 1rem;
+            padding: 3rem;
             background: #F1E7DC;
+            text-align: center;
         }
 
         .countdown-container {
@@ -89,7 +78,6 @@
         }
 
         .countdown-container div {
-            text-align: center;
             background: #FAF6F1;
             padding: 1rem 2rem;
             border-radius: 10px;
@@ -97,47 +85,15 @@
         }
 
         .countdown-container span {
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #5A4633;
         }
 
-        /* Calendario */
-        #calendar {
-            text-align: center;
-            padding: 2rem;
-            background: #FAF6F1;
-        }
-
-        .calendar-circle {
-            width: 200px;
-            height: 200px;
-            margin: auto;
-            background: linear-gradient(45deg, #E1C2A0, #FAF6F1);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .calendar-circle h2 {
-            margin: 0;
-            font-size: 2rem;
-            color: #5A4633;
-        }
-
-        .calendar-text {
-            margin-top: 1rem;
-            font-size: 1.5rem;
-            color: #7A5E42;
-        }
-
-        /* Gallery */
+        /* Gallery Section */
         #gallery {
-            padding: 2rem;
+            padding: 3rem;
             text-align: center;
-            background: #F1E7DC;
+            background: #FAF6F1;
         }
 
         .gallery-container {
@@ -154,33 +110,47 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Donation Section */
+        /* Donations Section */
         #donations {
             padding: 3rem;
+            background: #F1E7DC;
             text-align: center;
-            background: #FAF6F1;
-        }
-
-        #donations h3 {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            color: #7A5E42;
         }
 
         .donation-divider img {
-            width: 100%;
-            max-width: 800px;
-            margin: 2rem auto;
+            max-width: 100%;
             display: block;
+            margin: 2rem auto;
+            border-radius: 10px;
+        }
+
+        /* Maps Section */
+        #maps {
+            padding: 3rem;
+            background: #FAF6F1;
+        }
+
+        .maps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .map {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            border: none;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* RSVP */
+        /* RSVP Section */
         #rsvp {
             padding: 3rem;
-            text-align: center;
             background: #F1E7DC;
+            text-align: center;
         }
 
         #rsvp-form {
@@ -202,23 +172,10 @@
             background: #5A4633;
             color: white;
             cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        #rsvp-form button:hover {
-            background: #4B3A2A;
         }
 
         /* Responsiveness */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
             .countdown-container {
                 flex-direction: column;
             }
@@ -230,18 +187,16 @@
     </style>
 </head>
 <body>
-    <!-- Saludo -->
+    <!-- Hero Section -->
     <header class="hero">
-        <div class="overlay">
-            <div class="couple-names">Luis y Leo</div>
-            <h1>¡Nos Casamos!</h1>
-            <p>23 de Marzo 2025</p>
-        </div>
+        <div class="couple-names">Luis y Leo</div>
+        <h1>¡Nos Casamos!</h1>
+        <p>23 de Marzo 2025</p>
     </header>
 
-    <!-- Countdown -->
+    <!-- Countdown Section -->
     <section id="countdown">
-        <h2>¡Faltan solo!</h2>
+        <h2>Cuenta regresiva</h2>
         <div class="countdown-container">
             <div><span id="days">0</span><p>Días</p></div>
             <div><span id="hours">0</span><p>Horas</p></div>
@@ -250,9 +205,9 @@
         </div>
     </section>
 
-    <!-- Galería -->
+    <!-- Gallery Section -->
     <section id="gallery">
-        <h2>Un vistazo a nuestro amor</h2>
+        <h2>Momentos Especiales</h2>
         <div class="gallery-container">
             <div class="gallery-item"><img src="photo1.jpg" alt="Foto 1"></div>
             <div class="gallery-item"><img src="photo2.jpg" alt="Foto 2"></div>
@@ -260,20 +215,33 @@
         </div>
     </section>
 
-    <!-- Donations -->
+    <!-- Donations Section -->
     <section id="donations">
-        <h2>Agradecemos tus muestras de cariño en efectivo nuestro gran día</h2>
+        <h2>Agradecemos tus muestras de cariño</h2>
         <h3>Gracias por ayudarnos a construir nuestra futura familia</h3>
+        <div class="donation-divider">
+            <img src="divider.jpg" alt="Foto decorativa">
+        </div>
     </section>
 
-    <!-- Divider -->
-    <div class="donation-divider">
-        <img src="divider.jpg" alt="Foto de decoración">
-    </div>
+    <!-- Maps Section -->
+    <section id="maps">
+        <h2>Ubicaciones</h2>
+        <div class="maps-container">
+            <iframe 
+                class="map" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31210.0000!2d-99.133209!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMjXCsDIzJzE4LjAiTiA5OcKwMDgnMDAuMCJX!5e0!3m2!1ses!2smx!4v1234567890"
+                allowfullscreen></iframe>
+            <iframe 
+                class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31210.0000!2d-99.133209!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMjXCsDIzJzE4LjAiTiA5OcKwMDgnMDAuMCJX!5e0!3m2!1ses!2smx!4v1234567890"
+                allowfullscreen></iframe>
+        </div>
+    </section>
 
-    <!-- RSVP -->
+    <!-- RSVP Section -->
     <section id="rsvp">
-        <h2>Confirma tu asistencia</h2>
+        <h2>Confirma tu Asistencia</h2>
         <form id="rsvp-form">
             <input type="text" placeholder="Tu nombre" required>
             <input type="email" placeholder="Tu correo" required>
@@ -282,8 +250,8 @@
         </form>
     </section>
 
+    <!-- Countdown Script -->
     <script>
-        // Temporizador de cuenta regresiva
         const targetDate = new Date("2025-03-23T00:00:00");
         const updateCountdown = () => {
             const now = new Date();
