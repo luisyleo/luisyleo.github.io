@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda</title>
+    <title>Invitación de Boda - Luis y Leo</title>
     <style>
         /* General */
         body {
@@ -44,27 +44,15 @@
             position: relative;
             text-align: center;
             color: #FAF6F1;
-        }
-
-        .hero .overlay {
-            background: rgba(90, 70, 51, 0.7);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 1rem;
         }
 
         .hero h1 {
             font-size: 4rem;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
         }
 
         /* Luis y Leo */
@@ -78,7 +66,7 @@
         /* Countdown */
         #countdown {
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 2rem 1rem;
             background: #F1E7DC;
         }
 
@@ -86,6 +74,7 @@
             display: flex;
             justify-content: center;
             gap: 2rem;
+            flex-wrap: wrap;
         }
 
         .countdown-container div {
@@ -110,7 +99,7 @@
         /* Calendario */
         #calendar {
             text-align: center;
-            padding: 3rem;
+            padding: 2rem;
             background: #FAF6F1;
         }
 
@@ -140,7 +129,7 @@
 
         /* Gallery */
         #gallery {
-            padding: 3rem;
+            padding: 2rem;
             text-align: center;
             background: #F1E7DC;
         }
@@ -210,19 +199,36 @@
         #rsvp-form button:hover {
             background: #4B3A2A;
         }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .countdown-container {
+                flex-direction: column;
+            }
+
+            .maps-container {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Saludo -->
     <header class="hero">
-        <div class="overlay">
-            <div class="couple-names">Luis y Leo</div>
-            <h1>¡Nos Casamos!</h1>
-            <p>23 de Marzo 2025</p>
-        </div>
+        <div class="couple-names">Luis y Leo</div>
+        <h1>¡Nos Casamos!</h1>
+        <p>23 de Marzo 2025</p>
     </header>
 
-    <!-- Count Down -->
+    <!-- Countdown -->
     <section id="countdown">
         <h2>¡Faltan solo!</h2>
         <div class="countdown-container">
@@ -233,7 +239,6 @@
         </div>
     </section>
 
-```html
     <!-- Calendario -->
     <section id="calendar">
         <div class="calendar-circle">
@@ -254,8 +259,12 @@
 
     <!-- Mapas -->
     <section class="maps-container">
-        <h2>Ubicación</h2>
         <div class="map">
+            <h3>Iglesia</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy"></iframe>
+        </div>
+        <div class="map">
+            <h3>Recepción</h3>
             <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy"></iframe>
         </div>
     </section>
