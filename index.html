@@ -36,30 +36,42 @@
         p {
             font-size: 1rem;
         }
-          /* Hero Section */
+
+        /* Hero Section */
         .hero {
             height: 100vh;
             background: url('background.jpg') center/cover no-repeat;
             position: relative;
-            text-align: center;
-            color: #FAF6F1;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 1rem;
         }
 
-        .hero h1 {
-            font-size: 4rem;
+        .hero .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
         }
 
-        /* Luis y Leo */
-        .couple-names {
+        .hero .couple-names {
             font-family: 'Great Vibes', cursive;
             font-size: 5rem;
             color: #E1C2A0;
             margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #FAF6F1;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            color: #FAF6F1;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
         /* Countdown */
@@ -88,11 +100,6 @@
             font-size: 2rem;
             font-weight: bold;
             color: #5A4633;
-        }
-
-        .countdown-container p {
-            font-size: 1rem;
-            margin: 0;
         }
 
         /* Calendario */
@@ -147,22 +154,25 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Maps */
-        .maps-container {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 2rem;
+        /* Donation Section */
+        #donations {
+            padding: 3rem;
+            text-align: center;
             background: #FAF6F1;
         }
 
-        .map iframe {
+        #donations h3 {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            color: #7A5E42;
+        }
+
+        .donation-divider img {
             width: 100%;
-            max-width: 500px;
-            height: 300px;
+            max-width: 800px;
+            margin: 2rem auto;
+            display: block;
             border-radius: 10px;
-            border: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
@@ -222,9 +232,11 @@
 <body>
     <!-- Saludo -->
     <header class="hero">
-        <div class="couple-names">Luis y Leo</div>
-        <h1>¡Nos Casamos!</h1>
-        <p>23 de Marzo 2025</p>
+        <div class="overlay">
+            <div class="couple-names">Luis y Leo</div>
+            <h1>¡Nos Casamos!</h1>
+            <p>23 de Marzo 2025</p>
+        </div>
     </header>
 
     <!-- Countdown -->
@@ -238,14 +250,6 @@
         </div>
     </section>
 
-    <!-- Calendario -->
-    <section id="calendar">
-        <div class="calendar-circle">
-            <h2>23 MAR</h2>
-        </div>
-        <div class="calendar-text">¡Reserva la fecha y acompáñanos!</div>
-    </section>
-
     <!-- Galería -->
     <section id="gallery">
         <h2>Un vistazo a nuestro amor</h2>
@@ -256,17 +260,16 @@
         </div>
     </section>
 
-    <!-- Mapas -->
-    <section class="maps-container">
-        <div class="map">
-            <h3>Iglesia</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy"></iframe>
-        </div>
-        <div class="map">
-            <h3>Recepción</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy"></iframe>
-        </div>
+    <!-- Donations -->
+    <section id="donations">
+        <h2>Agradecemos tus muestras de cariño en efectivo nuestro gran día</h2>
+        <h3>Gracias por ayudarnos a construir nuestra futura familia</h3>
     </section>
+
+    <!-- Divider -->
+    <div class="donation-divider">
+        <img src="divider.jpg" alt="Foto de decoración">
+    </div>
 
     <!-- RSVP -->
     <section id="rsvp">
