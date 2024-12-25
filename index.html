@@ -4,227 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
-
-    <!-- Estilos CSS -->
     <style>
-        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Georgia', serif;
+            background-color: #fafafa;
+            color: #333;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            text-align: center;
         }
-
         .container {
-            width: 80%;
+            max-width: 800px;
             margin: 0 auto;
-        }
-
-        h1, h2 {
-            text-align: center;
-            color: #333;
-        }
-
-        /* Welcome Section */
-        .welcome-section {
-            background: #f7a1d3;
-            padding: 50px 0;
-            text-align: center;
-        }
-
-        .welcome-section h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .welcome-section .main-photo {
-            max-width: 100%;
-            height: auto;
+            padding: 20px;
+            background-color: #fff;
             border-radius: 10px;
-            margin-top: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
-
-        .welcome-section p {
-            font-size: 18px;
-            margin-top: 20px;
+        .header {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background: url('ruta/a/tu/imagen.jpg') no-repeat center center;
+            background-size: cover;
+            border-radius: 10px 10px 0 0;
         }
-
-        .welcome-section .btn {
-            background-color: #333;
+        .header-text {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
             padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .title {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+        .details, .section {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        .details p, .section p {
+            margin: 10px 0;
+        }
+        .rsvp-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 30px;
+            background-color: #ff6f61;
+            color: #fff;
+            border-radius: 50px;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        .welcome-section .btn:hover {
-            background-color: #f7a1d3;
-        }
-
-        /* Story Section */
-        .story-section {
-            padding: 40px 0;
-            background-color: #fff;
-        }
-
-        .story-section p {
             font-size: 18px;
-            line-height: 1.6;
+            transition: background-color 0.3s;
         }
-
-        /* Details Section */
-        .details-section {
-            padding: 40px 0;
-            background-color: #f4f4f4;
+        .rsvp-button:hover {
+            background-color: #e65b50;
         }
-
-        .details-section p {
-            font-size: 18px;
-        }
-
-        /* RSVP Section */
-        .rsvp-section {
-            padding: 40px 0;
-            background-color: #fff;
-        }
-
-        .rsvp-section form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .rsvp-section label {
-            font-size: 16px;
-            margin: 10px 0 5px;
-        }
-
-        .rsvp-section input {
-            width: 80%;
-            padding: 10px;
-            margin-bottom: 20px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .rsvp-section .btn {
-            background-color: #333;
-            color: white;
-            padding: 10px 30px;
-            border-radius: 5px;
-            font-size: 18px;
-        }
-
-        .rsvp-section .btn:hover {
-            background-color: #f7a1d3;
-        }
-
-        /* Information Section */
-        .info-section {
-            padding: 40px 0;
-            background-color: #f4f4f4;
-        }
-
-        .info-section p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        /* Thanks Section */
-        .thanks-section {
-            padding: 40px 0;
-            background-color: #fff;
-        }
-
-        .thanks-section p {
-            font-size: 18px;
-            text-align: center;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #888;
         }
     </style>
 </head>
 <body>
-
-    <!-- Sección de Bienvenida -->
-    <header class="welcome-section">
-        <div class="container">
-            <h1>Nuestra Historia de Amor</h1>
-            <img src="foto-principal.jpg" alt="Foto de pareja" class="main-photo">
-            <p>Con mucho amor y alegría, [Nombre de la Novia] y [Nombre del Novio] les invitamos a compartir con nosotros el día más importante de nuestras vidas.</p>
-            <a href="#details" class="btn">Ver Detalles del Evento</a>
+    <div class="container">
+        <div class="header">
+            <div class="header-text">
+                ¡Estás invitado a nuestra boda!
+            </div>
         </div>
-    </header>
-
-    <!-- Sección Nuestra Historia -->
-    <section class="story-section" id="story">
-        <div class="container">
-            <h2>Cómo Nos Conocimos</h2>
-            <p>[Inserta aquí la historia sobre cómo se conocieron y cómo llegó la propuesta de boda. Sé creativo y emotivo.]</p>
+        <div class="title">María & Juan</div>
+        <div class="section">
+            <h2>Nuestra Historia</h2>
+            <p>Con mucho amor y alegría, María y Juan les invitamos a compartir con nosotros el día más importante de nuestras vidas. Nos gustaría contarles nuestra historia, celebrar nuestra unión y compartir momentos especiales juntos en este día único.</p>
         </div>
-    </section>
-
-    <!-- Sección de Detalles del Evento -->
-    <section class="details-section" id="details">
-        <div class="container">
+        <div class="section">
             <h2>El Gran Día</h2>
-            <p><strong>Fecha:</strong> [Día, Mes, Año]</p>
-            <p><strong>Hora:</strong> [Hora]</p>
-            <p><strong>Lugar de la Ceremonia:</strong> [Nombre del lugar, Dirección]</p>
-            <p><strong>Lugar de la Recepción:</strong> [Nombre del lugar, Dirección]</p>
-            <a href="https://www.google.com/maps" target="_blank" class="btn">Ver en Google Maps</a>
+            <p><strong>Fecha:</strong> 25 de diciembre de 2024</p>
+            <p><strong>Lugar de la Ceremonia:</strong> Jardines del Paraíso, [Dirección]</p>
+            <p><strong>Hora:</strong> 5:00 PM</p>
+            <p><strong>Recepción:</strong> [Nombre del lugar], [Dirección]</p>
+            <a href="https://maps.google.com" target="_blank">Ver en Google Maps</a>
         </div>
-    </section>
-
-    <!-- Sección de Confirmación de Asistencia (RSVP) -->
-    <section class="rsvp-section" id="rsvp">
-        <div class="container">
+        <div class="section">
             <h2>Confirma tu Asistencia</h2>
-            <form action="#" method="POST">
-                <label for="name">Nombre Completo:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="guests">Número de Invitados:</label>
-                <input type="number" id="guests" name="guests" min="1" required>
-                
-                <label for="diet">Restricciones Dietéticas:</label>
-                <input type="text" id="diet" name="diet">
-
-                <button type="submit" class="btn">Confirmar mi asistencia</button>
+            <form action="#">
+                <p><input type="text" name="name" placeholder="Nombre Completo" required></p>
+                <p><input type="number" name="guests" placeholder="Número de Personas" required></p>
+                <p><input type="text" name="diet" placeholder="Restricciones Dietéticas"></p>
+                <button type="submit" class="rsvp-button">Confirmar mi asistencia</button>
             </form>
         </div>
-    </section>
-
-    <!-- Sección de Información Adicional -->
-    <section class="info-section" id="info">
-        <div class="container">
-            <h2>Información Útil</h2>
-            <p>[Detalles sobre alojamiento cercano, transporte, código de vestimenta, listas de bodas, etc.]</p>
+        <div class="section">
+            <h2>Información útil</h2>
+            <p>Alojamiento cercano, transporte, código de vestimenta, regalos, etc. También puedes incluir enlaces a las listas de bodas, detalles sobre la luna de miel, o cualquier otra información relevante.</p>
         </div>
-    </section>
-
-    <!-- Sección de Agradecimientos -->
-    <section class="thanks-section" id="thanks">
-        <div class="container">
+        <div class="section">
+            <h2>Galería de Fotos</h2>
+            <p>Momentos especiales de nuestra historia.</p>
+            <div class="gallery">
+                <!-- Aquí puedes añadir tus imágenes -->
+                <img src="ruta/a/imagen1.jpg" alt="Foto 1" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px;">
+                <img src="ruta/a/imagen2.jpg" alt="Foto 2" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px;">
+                <!-- Añade más imágenes según sea necesario -->
+            </div>
+        </div>
+        <div class="section">
             <h2>Gracias por ser parte de nuestra historia</h2>
-            <p>[Mensaje de agradecimiento a los invitados.]</p>
+            <p>Un pequeño mensaje de agradecimiento a los invitados por ser parte de su vida y celebrar con ellos este día tan especial.</p>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>Para más información, puedes contactarnos por correo electrónico a [correo@dominio.com] o llamarnos al [número].</p>
+        <div class="footer">
+            <p>Correo electrónico: [tu-email@ejemplo.com] | Teléfono: [tu-número] | Redes sociales: [Tus redes]</p>
+            <p>Logos de las plataformas donde están registrados para su boda (si aplica).</p>
         </div>
-    </footer>
-
+    </div>
 </body>
 </html>
