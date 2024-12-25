@@ -233,6 +233,7 @@
         </div>
     </section>
 
+```html
     <!-- Calendario -->
     <section id="calendar">
         <div class="calendar-circle">
@@ -241,10 +242,37 @@
         <div class="calendar-text">¡Reserva la fecha y acompáñanos!</div>
     </section>
 
-    <!-- Resto del contenido... -->
+    <!-- Galería -->
+    <section id="gallery">
+        <h2>Un vistazo a nuestro amor</h2>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="photo1.jpg" alt="Foto 1"></div>
+            <div class="gallery-item"><img src="photo2.jpg" alt="Foto 2"></div>
+            <div class="gallery-item"><img src="photo3.jpg" alt="Foto 3"></div>
+        </div>
+    </section>
+
+    <!-- Mapas -->
+    <section class="maps-container">
+        <h2>Ubicación</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- RSVP -->
+    <section id="rsvp">
+        <h2>Confirma tu asistencia</h2>
+        <form id="rsvp-form">
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu correo" required>
+            <input type="number" placeholder="Número de invitados" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
 
     <script>
-        // Countdown Timer
+        // Temporizador de cuenta regresiva
         const targetDate = new Date("2025-03-23T00:00:00");
         const updateCountdown = () => {
             const now = new Date();
