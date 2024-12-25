@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sección de Bienvenida -->
+    <header class="welcome-section">
+        <div class="container">
+            <h1>Nuestra Historia de Amor</h1>
+            <img src="foto-principal.jpg" alt="Foto de pareja" class="main-photo">
+            <p>Con mucho amor y alegría, [Nombre de la Novia] y [Nombre del Novio] les invitamos a compartir con nosotros el día más importante de nuestras vidas.</p>
+            <a href="#details" class="btn">Ver Detalles del Evento</a>
+        </div>
+    </header>
+
+    <!-- Sección Nuestra Historia -->
+    <section class="story-section" id="story">
+        <div class="container">
+            <h2>Cómo Nos Conocimos</h2>
+            <p>[Inserta aquí la historia sobre cómo se conocieron y cómo llegó la propuesta de boda. Sé creativo y emotivo.]</p>
+        </div>
+    </section>
+
+    <!-- Sección de Detalles del Evento -->
+    <section class="details-section" id="details">
+        <div class="container">
+            <h2>El Gran Día</h2>
+            <p><strong>Fecha:</strong> [Día, Mes, Año]</p>
+            <p><strong>Hora:</strong> [Hora]</p>
+            <p><strong>Lugar de la Ceremonia:</strong> [Nombre del lugar, Dirección]</p>
+            <p><strong>Lugar de la Recepción:</strong> [Nombre del lugar, Dirección]</p>
+            <a href="https://www.google.com/maps" target="_blank" class="btn">Ver en Google Maps</a>
+        </div>
+    </section>
+
+    <!-- Sección de Confirmación de Asistencia (RSVP) -->
+    <section class="rsvp-section" id="rsvp">
+        <div class="container">
+            <h2>Confirma tu Asistencia</h2>
+            <form action="#" method="POST">
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="guests">Número de Invitados:</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+                
+                <label for="diet">Restricciones Dietéticas:</label>
+                <input type="text" id="diet" name="diet">
+
+                <button type="submit" class="btn">Confirmar mi asistencia</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sección de Información Adicional -->
+    <section class="info-section" id="info">
+        <div class="container">
+            <h2>Información Útil</h2>
+            <p>[Detalles sobre alojamiento cercano, transporte, código de vestimenta, listas de bodas, etc.]</p>
+        </div>
+    </section>
+
+    <!-- Sección de Agradecimientos -->
+    <section class="thanks-section" id="thanks">
+        <div class="container">
+            <h2>Gracias por ser parte de nuestra historia</h2>
+            <p>[Mensaje de agradecimiento a los invitados.]</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Para más información, puedes contactarnos por correo electrónico a [correo@dominio.com] o llamarnos al [número].</p>
+        </div>
+    </footer>
+
+</body>
+</html>
