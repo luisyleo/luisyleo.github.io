@@ -5,123 +5,260 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
     <style>
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #fafafa;
-            color: #333;
+        /* Reset básico */
+        * {
             margin: 0;
             padding: 0;
-            text-align: center;
+            box-sizing: border-box;
         }
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Container para todo */
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
-        .header {
-            position: relative;
             width: 100%;
-            height: 300px;
-            background: url('ruta/a/tu/imagen.jpg') no-repeat center center;
-            background-size: cover;
-            border-radius: 10px 10px 0 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .header-text {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
+
+        /* Sección Bienvenida */
+        header {
+            height: 100vh;
+            background-image: url('foto-principal.jpg');
+            background-size: cover;
+            background-position: center;
             color: #fff;
-            padding: 10px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 50px;
+            position: relative;
+            animation: fadeIn 2s ease-out;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        header .btn {
+            background-color: #ff7b7b;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        header .btn:hover {
+            background-color: #ff4d4d;
+        }
+
+        /* Animación fadeIn para header */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Sección de Historia */
+        section#story {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+            animation: slideInUp 1s ease-out;
+        }
+
+        section#story h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section#story p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        /* Animación slideInUp */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Detalles del Evento */
+        section#details {
+            background: #f2f2f2;
+            padding: 60px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        section#details h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        section#details p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        section#details .btn {
+            margin-top: 20px;
+        }
+
+        /* RSVP (Confirmación de asistencia) */
+        section#rsvp {
+            background: #ff7b7b;
+            padding: 60px 0;
+            color: white;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        section#rsvp form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 20px;
+        }
+
+        section#rsvp input,
+        section#rsvp textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
             border-radius: 5px;
         }
-        .title {
-            font-size: 48px;
-            margin: 20px 0;
+
+        section#rsvp input[type="submit"] {
+            background-color: #fff;
+            color: #ff7b7b;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
         }
-        .details, .section {
-            font-size: 18px;
-            margin: 20px 0;
+
+        section#rsvp input[type="submit"]:hover {
+            background-color: #ff4d4d;
         }
-        .details p, .section p {
-            margin: 10px 0;
+
+        /* Agradecimientos */
+        section#thanks {
+            padding: 60px 0;
+            background: #fff;
+            text-align: center;
+            animation: slideInUp 1s ease-out;
         }
-        .rsvp-button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin-top: 30px;
-            background-color: #ff6f61;
+
+        section#thanks h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        section#thanks p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        footer a {
             color: #fff;
-            border-radius: 50px;
             text-decoration: none;
-            font-size: 18px;
-            transition: background-color 0.3s;
+            font-weight: bold;
         }
-        .rsvp-button:hover {
-            background-color: #e65b50;
-        }
-        .footer {
-            margin-top: 50px;
-            font-size: 14px;
-            color: #888;
+
+        footer a:hover {
+            color: #ff7b7b;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="header-text">
-                ¡Estás invitado a nuestra boda!
-            </div>
-        </div>
-        <div class="title">María & Juan</div>
-        <div class="section">
-            <h2>Nuestra Historia</h2>
-            <p>Con mucho amor y alegría, María y Juan les invitamos a compartir con nosotros el día más importante de nuestras vidas. Nos gustaría contarles nuestra historia, celebrar nuestra unión y compartir momentos especiales juntos en este día único.</p>
-        </div>
-        <div class="section">
-            <h2>El Gran Día</h2>
-            <p><strong>Fecha:</strong> 25 de diciembre de 2024</p>
-            <p><strong>Lugar de la Ceremonia:</strong> Jardines del Paraíso, [Dirección]</p>
-            <p><strong>Hora:</strong> 5:00 PM</p>
-            <p><strong>Recepción:</strong> [Nombre del lugar], [Dirección]</p>
-            <a href="https://maps.google.com" target="_blank">Ver en Google Maps</a>
-        </div>
-        <div class="section">
-            <h2>Confirma tu Asistencia</h2>
-            <form action="#">
-                <p><input type="text" name="name" placeholder="Nombre Completo" required></p>
-                <p><input type="number" name="guests" placeholder="Número de Personas" required></p>
-                <p><input type="text" name="diet" placeholder="Restricciones Dietéticas"></p>
-                <button type="submit" class="rsvp-button">Confirmar mi asistencia</button>
-            </form>
-        </div>
-        <div class="section">
-            <h2>Información útil</h2>
-            <p>Alojamiento cercano, transporte, código de vestimenta, regalos, etc. También puedes incluir enlaces a las listas de bodas, detalles sobre la luna de miel, o cualquier otra información relevante.</p>
-        </div>
-        <div class="section">
-            <h2>Galería de Fotos</h2>
-            <p>Momentos especiales de nuestra historia.</p>
-            <div class="gallery">
-                <!-- Aquí puedes añadir tus imágenes -->
-                <img src="ruta/a/imagen1.jpg" alt="Foto 1" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px;">
-                <img src="ruta/a/imagen2.jpg" alt="Foto 2" style="width: 100%; height: auto; border-radius: 10px; margin-bottom: 10px;">
-                <!-- Añade más imágenes según sea necesario -->
-            </div>
-        </div>
-        <div class="section">
-            <h2>Gracias por ser parte de nuestra historia</h2>
-            <p>Un pequeño mensaje de agradecimiento a los invitados por ser parte de su vida y celebrar con ellos este día tan especial.</p>
-        </div>
-        <div class="footer">
-            <p>Correo electrónico: [tu-email@ejemplo.com] | Teléfono: [tu-número] | Redes sociales: [Tus redes]</p>
-            <p>Logos de las plataformas donde están registrados para su boda (si aplica).</p>
-        </div>
-    </div>
+
+    <!-- Sección de Bienvenida -->
+    <header>
+        <h1>¡Nos Casamos!</h1>
+        <p>Con mucho amor, [Nombre de la Novia] y [Nombre del Novio] te invitamos a celebrar el día más importante de nuestras vidas.</p>
+        <a href="#details" class="btn">Ver Detalles del Evento</a>
+    </header>
+
+    <!-- Sección de Historia -->
+    <section id="story">
+        <h2>Cómo Nos Conocimos</h2>
+        <p>[Aquí va una historia corta de cómo se conocieron, el viaje que han recorrido juntos y cómo llegaron a este hermoso día]</p>
+    </section>
+
+    <!-- Sección de Detalles del Evento -->
+    <section id="details">
+        <h2>El Gran Día</h2>
+        <p><strong>Fecha:</strong> [Día, Mes, Año]</p>
+        <p><strong>Hora:</strong> [Hora]</p>
+        <p><strong>Lugar de la Ceremonia:</strong> [Nombre del lugar, Dirección]</p>
+        <p><strong>Lugar de la Recepción:</strong> [Nombre del lugar, Dirección]</p>
+        <a href="https://www.google.com/maps" target="_blank" class="btn">Ver en Google Maps</a>
+    </section>
+
+    <!-- Sección de Confirmación de Asistencia (RSVP) -->
+    <section id="rsvp">
+        <h2>Confirma tu Asistencia</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Nombre Completo" required>
+            <input type="number" name="guests" placeholder="Número de Invitados" min="1" required>
+            <textarea name="diet" placeholder="Restricciones Dietéticas (opcional)"></textarea>
+            <input type="submit" value="Confirmar mi asistencia">
+        </form>
+    </section>
+
+    <!-- Sección de Agradecimientos -->
+    <section id="thanks">
+        <h2>Gracias por ser parte de nuestra historia</h2>
+        <p>Estamos emocionados de compartir este día tan especial con ustedes. ¡Nos vemos pronto!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Para más información, contáctanos a [correo@dominio.com] o llámanos al [número].</p>
+        <p><a href="https://www.instagram.com/[tu_usuario]" target="_blank">Síguenos en Instagram</a></p>
+    </footer>
+
 </body>
 </html>
