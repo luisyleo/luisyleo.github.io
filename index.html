@@ -8,10 +8,10 @@
         /* General */
         body {
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            color: #5A4633;
-            background-color: #F9F4F1;
-            line-height: 1.6;
+            font-family: 'Lora', serif;
+            color: #3E2A47;
+            background-color: #F4F1E1;
+            line-height: 1.7;
         }
 
         h1, h2, h3, p {
@@ -21,28 +21,29 @@
 
         /* Hero Section */
         .hero {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('background.jpg') no-repeat center center;
+            background-size: cover;
             height: 100vh;
-            background: url('background.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #FAF6F1;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 2rem;
         }
 
         .hero .couple-names {
             font-family: 'Dancing Script', cursive;
             font-size: 6rem;
             color: #E1C2A0;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .hero h1 {
             font-size: 4rem;
-            color: #F1F1F1;
-            font-weight: bold;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
         }
 
         .hero p {
@@ -53,15 +54,14 @@
 
         /* Countdown Section */
         #countdown {
-            padding: 4rem;
-            background: #F1E7DC;
+            padding: 4rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #F4F1E1;
         }
 
         #countdown h2 {
-            font-size: 2.5rem;
-            color: #5A4633;
+            font-size: 3rem;
+            color: #3E2A47;
             margin-bottom: 2rem;
         }
 
@@ -73,86 +73,91 @@
         }
 
         .countdown-container div {
-            background: #FAF6F1;
-            padding: 1.5rem 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            border: 2px solid #E1C2A0;
+            background-color: #E1C2A0;
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .countdown-container span {
             font-size: 3rem;
-            font-weight: bold;
-            color: #5A4633;
+            font-weight: 700;
+            color: #3E2A47;
         }
 
         .countdown-container p {
-            font-size: 1.2rem;
-            color: #5A4633;
+            font-size: 1rem;
+            color: #3E2A47;
         }
 
         /* Gallery Section */
         #gallery {
-            padding: 4rem;
-            background: #FAF6F1;
+            padding: 4rem 2rem;
+            background: #FAF3D1;
             text-align: center;
         }
 
         #gallery h2 {
             font-size: 2.5rem;
-            color: #5A4633;
-            margin-bottom: 3rem;
+            color: #3E2A47;
+            margin-bottom: 2rem;
         }
 
         .gallery-container {
             display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
             justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .gallery-item {
+            flex: 1;
+            max-width: 350px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .gallery-item img {
             width: 100%;
-            max-width: 350px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease-in-out;
+            height: auto;
+            transition: transform 0.3s ease;
         }
 
         .gallery-item img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
         }
 
         /* Donations Section */
         #donations {
-            padding: 4rem;
-            background: #F9F4F1;
+            padding: 4rem 2rem;
+            background: #F4F1E1;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         #donations h2 {
             font-size: 2.5rem;
-            color: #5A4633;
+            color: #3E2A47;
             margin-bottom: 1rem;
         }
 
         #donations h3 {
             font-size: 1.8rem;
-            color: #D79D7B;
+            color: #9E7C61;
+            margin-bottom: 2rem;
         }
 
         .donation-divider img {
             max-width: 100%;
             display: block;
             margin: 2rem auto;
-            border-radius: 10px;
+            border-radius: 12px;
         }
 
         /* Dress Code Section */
         #dress-code {
-            padding: 4rem;
-            background: #D79D7B;
+            padding: 4rem 2rem;
+            background: #9E7C61;
             color: white;
             text-align: center;
         }
@@ -170,14 +175,14 @@
 
         /* Maps Section */
         #maps {
-            padding: 4rem;
-            background: #F9F4F1;
+            padding: 4rem 2rem;
+            background: #F4F1E1;
             text-align: center;
         }
 
         #maps h2 {
             font-size: 2.5rem;
-            color: #5A4633;
+            color: #3E2A47;
             margin-bottom: 2rem;
         }
 
@@ -192,47 +197,52 @@
             flex: 1;
             max-width: 500px;
             height: 300px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         /* RSVP Section */
         #rsvp {
-            padding: 4rem;
-            background: #F1E7DC;
+            padding: 4rem 2rem;
+            background: #E1C2A0;
+            color: white;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         #rsvp-form {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            max-width: 400px;
+            max-width: 500px;
             margin: auto;
         }
 
         #rsvp-form input, #rsvp-form button {
             padding: 1rem;
-            border-radius: 15px;
-            border: 2px solid #D79D7B;
+            border-radius: 8px;
+            border: 2px solid #3E2A47;
             font-size: 1.2rem;
         }
 
         #rsvp-form button {
-            background: #5A4633;
+            background: #3E2A47;
             color: white;
             cursor: pointer;
             transition: background 0.3s ease;
         }
 
         #rsvp-form button:hover {
-            background: #D79D7B;
+            background: #9E7C61;
         }
 
         /* Responsiveness */
         @media (max-width: 768px) {
             .countdown-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .gallery-container {
                 flex-direction: column;
             }
 
@@ -240,8 +250,8 @@
                 flex-direction: column;
             }
 
-            .gallery-container {
-                flex-direction: column;
+            .gallery-item img {
+                max-width: 100%;
             }
         }
     </style>
@@ -287,29 +297,26 @@
     <!-- Dress Code Section -->
     <section id="dress-code">
         <h2>Código de Vestimenta</h2>
-        <p>Será una noche de cóctel elegante. Los colores reservados son:</p>
-        <p><strong>Mujeres:</strong> Blanco</p>
-        <p><strong>Hombres:</strong> Vino</p>
+        <p>El evento será tipo cóctel.</p>
+        <p>Colores reservados: Blanco para mujeres y Vino para hombres.</p>
     </section>
 
     <!-- Maps Section -->
     <section id="maps">
-        <h2>Ubicaciones</h2>
+        <h2>Ubicación de la Iglesia y del Venue</h2>
         <div class="maps-container">
-            <iframe 
-                class="map" 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31210.0000!2d-99.133209!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMjXCsDIzJzE4LjAiTiA5OcKwMDgnMDAuMCJX!5e0!3m2!1ses!2smx!4v1234567890"
-                allowfullscreen></iframe>
-            <iframe 
-                class="map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31210.0000!2d-99.133209!3d19.432608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2zMjXCsDIzJzE4LjAiTiA5OcKwMDgnMDAuMCJX!5e0!3m2!1ses!2smx!4v1234567890"
-                allowfullscreen></iframe>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?..." width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?..."></iframe>
+            </div>
         </div>
     </section>
 
     <!-- RSVP Section -->
     <section id="rsvp">
-        <h2>Confirma tu Asistencia</h2>
+        <h2>Confirmar Asistencia</h2>
         <form id="rsvp-form">
             <input type="text" placeholder="Nombre Completo" required>
             <input type="email" placeholder="Correo Electrónico" required>
@@ -318,7 +325,7 @@
     </section>
 
     <script>
-        // Code for the countdown functionality
+        // Countdown Script
         const countdown = setInterval(function() {
             const now = new Date().getTime();
             const weddingDate = new Date('Mar 23, 2025 00:00:00').getTime();
