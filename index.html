@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lora&display=swap" rel="stylesheet">
+    <title>Luna de Miel en Chile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Dancing+Script&display=swap" rel="stylesheet">
     <style>
         /* General */
         body {
@@ -282,112 +282,74 @@
 <body>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="couple-names">Laura & Andrés</div>
+    <div class="hero">
         <h1>¡Nos casamos!</h1>
-        <p>Te invitamos a celebrar con nosotros este día tan especial.</p>
-    </section>
+        <p>¡Estamos muy felices de compartir este momento con ustedes!</p>
+        <div class="couple-names">Luis y Leo</div>
+    </div>
 
     <!-- Countdown Section -->
-    <section id="countdown">
-        <h2>Faltan</h2>
+    <div id="countdown">
+        <h2>Cuenta Regresiva</h2>
         <div class="countdown-container">
             <div>
-                <span id="days">0</span>
+                <span>10</span>
                 <p>Días</p>
             </div>
             <div>
-                <span id="hours">0</span>
+                <span>12</span>
                 <p>Horas</p>
             </div>
             <div>
-                <span id="minutes">0</span>
+                <span>30</span>
                 <p>Minutos</p>
             </div>
-            <div>
-                <span id="seconds">0</span>
-                <p>Segundos</p>
-            </div>
         </div>
-    </section>
+    </div>
 
     <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Galería de Fotos</h2>
+    <div id="gallery">
+        <h2>Galería</h2>
         <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="foto1.jpg" alt="Foto 1">
-            </div>
-            <div class="gallery-item">
-                <img src="foto2.jpg" alt="Foto 2">
-            </div>
-            <div class="gallery-item">
-                <img src="foto3.jpg" alt="Foto 3">
-            </div>
+            <div class="gallery-item"><img src="image1.jpg" alt="Imagen 1"></div>
+            <div class="gallery-item"><img src="image2.jpg" alt="Imagen 2"></div>
+            <div class="gallery-item"><img src="image3.jpg" alt="Imagen 3"></div>
         </div>
-    </section>
+    </div>
 
     <!-- Donations Section -->
-    <section id="donations">
+    <div id="donations">
         <h2>Donaciones</h2>
-        <h3>Si deseas colaborar, hazlo a través de nuestra cuenta bancaria.</h3>
+        <h3>Contribuye a nuestra luna de miel</h3>
         <div class="donation-divider">
-            <img src="divider.jpg" alt="Divider">
+            <img src="divider.jpg" alt="Donaciones">
         </div>
-    </section>
+    </div>
 
     <!-- Dress Code Section -->
-    <section id="dress-code">
+    <div id="dress-code">
         <h2>Código de Vestimenta</h2>
-        <p>El evento será tipo cóctel.</p>
-        <p>Colores reservados: Blanco para mujeres y Vino para hombres.</p>
-    </section>
+        <p>¡Vístete elegante para la ocasión!</p>
+    </div>
 
     <!-- Maps Section -->
-    <section id="maps">
-        <h2>Ubicación de la Iglesia y del Venue</h2>
+    <div id="maps">
+        <h2>Ubicación del Evento</h2>
         <div class="maps-container">
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?..." width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?..."></iframe>
-            </div>
+            <div class="map"></div>
+            <div class="map"></div>
         </div>
-    </section>
+    </div>
 
     <!-- RSVP Section -->
-    <section id="rsvp">
+    <div id="rsvp">
         <h2>Confirmar Asistencia</h2>
         <form id="rsvp-form">
-            <input type="text" placeholder="Nombre Completo" required>
-            <input type="email" placeholder="Correo Electrónico" required>
-            <button type="submit">Confirmar Asistencia</button>
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu correo" required>
+            <button type="submit">Enviar</button>
         </form>
-    </section>
+    </div>
 
-    <script>
-        // Countdown Script
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const weddingDate = new Date('Mar 23, 2025 00:00:00').getTime();
-            const distance = weddingDate - now;
-
-            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').innerHTML = days;
-            document.getElementById('hours').innerHTML = hours;
-            document.getElementById('minutes').innerHTML = minutes;
-            document.getElementById('seconds').innerHTML = seconds;
-
-            if (distance < 0) {
-                clearInterval(countdown);
-                document.getElementById('countdown').innerHTML = '¡Es hoy!';
-            }
-        }, 1000);
-    </script>
 </body>
 </html>
